@@ -12,7 +12,6 @@ import java.io.Serializable;
 @Table(name = "users")
 public class User implements Serializable {
     @Id
-    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 

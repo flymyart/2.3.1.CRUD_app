@@ -1,6 +1,5 @@
 package com.springmvc.model;
 
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -23,7 +22,8 @@ public class User implements Serializable {
     @Column(name = "age")
     private int age;
 
-    public  User() {}
+    public User() {
+    }
 
     public User(String name, int age) {
         this.name = name;

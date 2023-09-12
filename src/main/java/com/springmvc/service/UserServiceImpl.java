@@ -9,7 +9,7 @@ import com.springmvc.dao.UserDao;
 import java.util.List;
 
 @Service
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
     private final UserDao userDao;
 
     public UserServiceImpl(UserDao userDao) {
@@ -17,16 +17,19 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
+    @Transactional
     public void save(User user) {
         this.userDao.save(user);
     }
 
     @Override
+    @Transactional
     public void update(int id, User updatedUser) {
         this.userDao.update(id, updatedUser);
     }
 
     @Override
+    @Transactional
     public void delete(int id) {
         this.userDao.delete(id);
     }
@@ -37,6 +40,7 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
+    @Transactional
     public List<User> listUsers() {
         return this.userDao.listUsers();
     }
